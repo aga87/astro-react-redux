@@ -1,20 +1,21 @@
 import React from 'react';
+
 import { useDispatch } from 'react-redux';
 
-import { resetGame } from '../app/actions';
+import { quitGame } from '../app/actions';
 
-function ResetBtn() {
+function QuitBtn() {
   const dispatch = useDispatch();
 
   function handleClick() {
-    dispatch(resetGame());
+    dispatch(quitGame());
   }
 
   return (
     <button type="button" className="o-btn o-btn--large" onClick={handleClick}>
-      RESET GAME
+      QUIT GAME
     </button>
   );
 }
 
-export default ResetBtn;
+export default QuitBtn;

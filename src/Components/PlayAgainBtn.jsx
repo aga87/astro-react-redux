@@ -1,9 +1,10 @@
 import React from 'react';
+
 import { useDispatch } from 'react-redux';
 
 import { resetGame } from '../app/actions';
 
-function ResetBtn() {
+function PlayAgainBtn() {
   const dispatch = useDispatch();
 
   function handleClick() {
@@ -12,9 +13,9 @@ function ResetBtn() {
 
   return (
     <button type="button" className="o-btn o-btn--large" onClick={handleClick}>
-      RESET GAME
+      PLAY AGAIN
     </button>
   );
 }
 
-export default ResetBtn;
+export default PlayAgainBtn;
