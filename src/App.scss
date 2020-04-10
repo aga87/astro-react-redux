@@ -1,4 +1,12 @@
+// Variables
+
 @import './scss/shared/variables/typography';
+@import './scss/shared/variables/colors';
+
+// Helpers
+
+@import './scss/shared/helpers/mixins';
+@import './scss/shared/helpers/modular_typography';
 
 // Components
 

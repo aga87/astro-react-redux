@@ -18,6 +18,10 @@ import './App.scss';
 
 // fixme: https://eslint.org/docs/rules/arrow-parens
 
+// fixme: add normalize to index js rather than to the app?
+
+// todo: audio
+
 function App() {
   return (
     <div className="App">
