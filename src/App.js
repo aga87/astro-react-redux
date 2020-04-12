@@ -14,17 +14,15 @@ import PointsPL2 from './Components/PointsPL2';
 import GameOverModal from './Components/GameOverModal';
 import QuitGameModal from './Components/QuitGameModal';
 
-import './App.scss';
-
 // fixme: https://eslint.org/docs/rules/arrow-parens
-
-// fixme: add normalize to index js rather than to the app?
 
 // todo: audio
 
+// todo: head, import fonts
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <OptionsBtn />
       <OptionsModal />
       <GameOverModal />
