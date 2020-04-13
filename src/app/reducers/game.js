@@ -157,7 +157,6 @@ const game = (state = initialState, action) => {
           }
         }
       }
-      // todo: why ESLint asks only for this one break statement?
       break;
     case PASS_TURN:
       return {

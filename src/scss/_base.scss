@@ -1,8 +1,8 @@
 html {
   // Full-screen image
   height: 100%;
-  // @include cover-img('../../public/img/sunrise-from-space.jpg');
-
+  background: url('../img/sunrise-from-space.jpg') no-repeat center center fixed;
+  background-size: cover;
   background-color: $blue-charcoal;
   font-size: 100%;
 }

@@ -1,9 +1,7 @@
 .t1 {
-  // the largest font-size
   @include h4($b-l-h, $type-scale);
 }
 
 .t2 {
-  // second largest font-size
   @include h5($b-l-h, $type-scale);
 }

@@ -51,7 +51,7 @@ function LetterBtns() {
       <li key={letter.toLowerCase()} className="l-list__item">
         <button
           type="button"
-          className="o-btn"
+          className="o-btn o-btn--letter"
           data-letter={letter.toLowerCase()}
           onClick={handleClick}
           disabled={isDisabled}

@@ -12,7 +12,7 @@ function OptionsBtn() {
   }
 
   return (
-    <button type="button" className="o-btn o-btn--auto" onClick={handleClick}>
+    <button type="button" className="o-btn" onClick={handleClick}>
       OPTIONS
     </button>
   );

@@ -18,7 +18,7 @@ function PassBtn() {
   return (
     <button
       type="button"
-      className="o-btn o-btn--auto"
+      className="o-btn"
       disabled={isDisabled}
       onClick={handleClick}
     >

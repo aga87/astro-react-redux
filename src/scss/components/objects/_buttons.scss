@@ -1,0 +1,35 @@
+.o-btn {
+  display: inline-block;
+  height: 2.25rem;
+  padding: 0 0.5em;
+  border: 0.2em solid $burnt-orange;
+  border-radius: 10px;
+  background: $ebony-06;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: $white;
+
+  &:disabled {
+    background: transparent;
+    border: none;
+    color: transparent;
+  }
+
+  &--letter {
+    width: 2.25rem;
+    padding: 0;
+    color: $yellow;
+
+    &:disabled {
+      -webkit-transition: all 1s ease-in;
+      transition: all 0.5s ease-in;
+    }
+  }
+
+  &--modal {
+    width: 7.594rem;
+    background: transparent;
+    //todo: padding 0 ??
+  }
+}

@@ -12,7 +12,7 @@ function PlayAgainBtn() {
   }
 
   return (
-    <button type="button" className="o-btn o-btn--large" onClick={handleClick}>
+    <button type="button" className="o-btn o-btn--modal" onClick={handleClick}>
       PLAY AGAIN
     </button>
   );

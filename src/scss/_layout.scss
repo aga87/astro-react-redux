@@ -1,0 +1,79 @@
+// todo: grid for IE
+// fixme: prefixes
+
+.l-grid {
+  display: grid;
+  /* Full-screen grid */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  grid-template-columns:
+    minmax(100px, 140px) minmax(100px, 140px) 1fr minmax(100px, 140px)
+    minmax(100px, 140px);
+  grid-template-rows:
+    auto auto minmax(auto, 1fr) minmax(auto, 1fr)
+    auto auto;
+
+  grid-template-areas:
+    'header header header header header'
+    'level level level level level'
+    'book book book book book'
+    'letters letters letters letters letters'
+    'tankPL1 headPL1 . headPL2 tankPL2'
+    'tankPL1 pointsPL1 . pointsPL2 tankPL2';
+}
+
+.l-grid__item-header {
+  grid-area: header;
+}
+
+.l-grid__item-level {
+  grid-area: level;
+}
+
+.l-grid__item-book {
+  grid-area: book;
+  align-self: center;
+}
+
+.l-grid__item-letters {
+  grid-area: letters;
+  justify-self: center;
+}
+
+.l-grid__item-tankPL1 {
+  grid-area: tankPL1;
+}
+
+.l-grid__item-headPL1 {
+  grid-area: headPL1;
+}
+
+.l-grid__item-pointsPL1 {
+  grid-area: pointsPL1;
+}
+
+.l-grid__item-pointsPL2 {
+  grid-area: pointsPL2;
+}
+
+.l-grid__item-headPL2 {
+  grid-area: headPL2;
+}
+
+.l-grid__item-tankPL2 {
+  grid-area: tankPL2;
+}
+
+.l-list {
+  list-style-type: none;
+  padding-left: 0.2em;
+  max-width: 23rem;
+
+  &__item {
+    display: inline-block;
+    margin-right: 0.2em;
+    margin-bottom: $b-l-h * 0.25rem;
+  }
+}

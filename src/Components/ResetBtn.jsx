@@ -11,7 +11,7 @@ function ResetBtn() {
   }
 
   return (
-    <button type="button" className="o-btn o-btn--large" onClick={handleClick}>
+    <button type="button" className="o-btn o-btn--modal" onClick={handleClick}>
       RESET GAME
     </button>
   );

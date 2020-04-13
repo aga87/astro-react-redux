@@ -12,7 +12,7 @@ function BackBtn() {
   }
 
   return (
-    <button type="button" className="o-btn o-btn--auto" onClick={handleClick}>
+    <button type="button" className="o-btn o-btn--modal" onClick={handleClick}>
       BACK
     </button>
   );

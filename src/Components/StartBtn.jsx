@@ -20,7 +20,8 @@ function StartBtn() {
   return (
     <button
       type="button"
-      className="o-btn o-btn--auto"
+      // className="o-btn o-btn--auto"
+      className="o-btn"
       onClick={handleClick}
       disabled={isDisabled}
     >
