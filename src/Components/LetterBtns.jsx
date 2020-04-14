@@ -2,40 +2,10 @@ import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { makeMove } from '../app/actions';
 import { getAvailLetterIds } from '../app/reducers/index';
+import { alphabet } from '../app/game-setup';
 import guessSound from '../audio/guess.mp3';
 
 function LetterBtns() {
-  // fixme: prop? - game file
-
-  const alphabet = [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z',
-  ];
-
   const availLetterIds = useSelector(getAvailLetterIds);
   const dispatch = useDispatch();
   const audioRef = useRef(null);

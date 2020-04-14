@@ -68,13 +68,40 @@ function makeRandomBookGetter() {
     'Dark Benediction',
     'Mockingbird',
     'Dune',
-    'The Moon Is a Harsh Mistress'
+    'The Moon Is a Harsh Mistress',
   ];
   return function getRandomItem() {
     return books[Math.floor(Math.random() * books.length)];
   };
 }
 
-const getRandomBook = makeRandomBookGetter();
+export const getRandomBook = makeRandomBookGetter();
 
-export default getRandomBook;
+export const alphabet = [
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z',
+];

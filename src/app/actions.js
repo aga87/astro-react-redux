@@ -1,4 +1,4 @@
-import getRandomBook from './app-utils';
+import { getRandomBook } from './game-setup';
 
 // Actions:
 export const START_LEVEL = 'START_LEVEL';

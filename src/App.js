@@ -11,16 +11,12 @@ import CanvasTankPL1 from './Components/CanvasTankPL1';
 import CanvasTankPL2 from './Components/CanvasTankPL2';
 import CanvasHeadPL1 from './Components/CanvasHeadPL1';
 import CanvasHeadPL2 from './Components/CanvasHeadPL2';
-
 import PointsPL1 from './Components/PointsPL1';
 import PointsPL2 from './Components/PointsPL2';
-
 import GameOverModal from './Components/GameOverModal';
 import QuitGameModal from './Components/QuitGameModal';
 
 // fixme: https://eslint.org/docs/rules/arrow-parens
-
-// todo: alphabet
 
 // todo: head
 

@@ -1,4 +1,5 @@
 import { PASS_TURN, RESET_GAME, START_LEVEL, MAKE_MOVE } from '../actions';
+import { alphabet } from '../game-setup';
 
 const initialState = {
   bookKey: [],
@@ -37,34 +38,7 @@ const game = (state = initialState, action) => {
         bookKey: bookArr,
         roundProgress: lettersToUnderscores,
         uniqueLettersNo: uniqueLetters.length,
-        availLetters: [
-          'A',
-          'B',
-          'C',
-          'D',
-          'E',
-          'F',
-          'G',
-          'H',
-          'I',
-          'J',
-          'K',
-          'L',
-          'M',
-          'N',
-          'O',
-          'P',
-          'Q',
-          'R',
-          'S',
-          'T',
-          'U',
-          'V',
-          'W',
-          'X',
-          'Y',
-          'Z',
-        ],
+        availLetters: alphabet,
       };
     }
     case MAKE_MOVE:
