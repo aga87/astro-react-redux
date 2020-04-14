@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { useSelector } from 'react-redux';
-
 import { getPointsPL2 } from '../app/reducers/index';
 
 function PointsPL2() {

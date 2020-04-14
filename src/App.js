@@ -20,7 +20,7 @@ import QuitGameModal from './Components/QuitGameModal';
 
 // fixme: https://eslint.org/docs/rules/arrow-parens
 
-// todo: audio
+// todo: alphabet
 
 // todo: head
 

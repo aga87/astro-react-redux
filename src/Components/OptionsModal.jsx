@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { optionsModalIsOpen } from '../app/reducers/index';
-
 import Star from './Star';
 import ResetBtn from './ResetBtn';
 import QuitBtn from './QuitBtn';

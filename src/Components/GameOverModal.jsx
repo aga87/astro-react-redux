@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-
 import { gameIsOver } from '../app/reducers/index';
-
 import WinningMsg from './WinningMsg';
 import Star from './Star';
 import PlayAgainBtn from './PlayAgainBtn';

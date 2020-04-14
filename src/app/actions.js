@@ -8,7 +8,6 @@ export const OPEN_OPTIONS = 'OPEN_OPTIONS';
 export const CLOSE_OPTIONS = 'CLOSE_OPTIONS';
 export const RESET_GAME = 'RESET_GAME';
 export const QUIT_GAME = 'QUIT_GAME';
-export const AUDIO_ENDED = 'AUDIO_ENDED';
 
 // Action creators:
 
@@ -45,8 +44,4 @@ export const openOptions = () => ({
 
 export const closeOptions = () => ({
   type: CLOSE_OPTIONS,
-});
-
-export const audioEnded = () => ({
-  type: AUDIO_ENDED,
 });

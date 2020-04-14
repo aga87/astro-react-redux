@@ -1,20 +1,25 @@
-import React from 'react';
-
+import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { openOptions } from '../app/actions';
+import menuSound from '../audio/menu.wav';
 
 function OptionsBtn() {
   const dispatch = useDispatch();
+  const audioRef = useRef(null);
 
   function handleClick() {
+    const audio = audioRef.current;
+    audio.play();
     dispatch(openOptions());
   }
 
   return (
-    <button type="button" className="o-btn" onClick={handleClick}>
-      OPTIONS
-    </button>
+    <div>
+      <button type="button" className="o-btn" onClick={handleClick}>
+        OPTIONS
+      </button>
+      <audio src={menuSound} ref={audioRef} />
+    </div>
   );
 }
 
