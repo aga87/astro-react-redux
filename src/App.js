@@ -18,9 +18,9 @@ import QuitGameModal from './Components/QuitGameModal';
 
 // fixme: https://eslint.org/docs/rules/arrow-parens
 
-// todo: head
+// todo: head / PWA
 
-// todo: grid fallbacks
+// todo: bem modifiers
 
 function App() {
   return (
@@ -57,12 +57,10 @@ function App() {
           <CanvasHeadPL1 />
         </div>
 
-        {/* todo: u-text-center */}
         <div className="l-grid__item-pointsPL1">
           <PointsPL1 />
         </div>
 
-        {/* todo: u-text-center */}
         <div className="l-grid__item-pointsPL2">
           <PointsPL2 />
         </div>

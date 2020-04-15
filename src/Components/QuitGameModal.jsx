@@ -9,7 +9,7 @@ function QuitGameModal() {
   return (
     <div className={isOpen ? 'c-modal c-modal--is-open' : 'c-modal'}>
       <div className="c-modal__content">
-        <div>
+        <div className="c-modal__stars">
           <Star /> <Star /> <Star />
         </div>
 
@@ -19,7 +19,7 @@ function QuitGameModal() {
           PLAYING
         </p>
 
-        <div>
+        <div className="c-modal__stars">
           <Star /> <Star /> <Star />
         </div>
       </div>

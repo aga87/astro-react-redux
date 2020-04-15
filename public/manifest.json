@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Astroman",
+  "name": "Astroman - Game for 2 Players",
   "icons": [
     {
       "src": "favicon.ico",

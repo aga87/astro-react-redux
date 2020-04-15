@@ -15,14 +15,14 @@ function GameOverModal() {
         <h1 className="t1">GAME OVER</h1>
         <WinningMsg />
 
-        <div>
+        <div className="c-modal__stars">
           <Star /> <Star /> <Star />
         </div>
 
         <PlayAgainBtn />
         <QuitBtn />
 
-        <div>
+        <div className="c-modal__stars">
           <Star /> <Star /> <Star />
         </div>
       </div>

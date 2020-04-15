@@ -20,4 +20,8 @@
     background: $black-09;
     border: ($b-l-h * 0.25rem) solid $white;
   }
+
+  &__stars {
+    height: $b-l-h * 1rem;
+  }
 }

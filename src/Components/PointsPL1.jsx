@@ -6,8 +6,10 @@ import Star from './Star';
 function PointsPL1() {
   const pointsPL1 = useSelector(getPointsPL1);
   return (
-    <div className="t1">
-      <Star />
+    <div className="c-points t1">
+      <span className="c-points__star">
+        <Star />
+      </span>
       {pointsPL1}
     </div>
   );

@@ -13,13 +13,13 @@ function OptionsModal() {
     <div className={isOpen ? 'c-modal c-modal--is-open' : 'c-modal'}>
       <div className="c-modal__content">
         <h1 className="t1">OPTIONS:</h1>
-        <div>
+        <div className="c-modal__stars">
           <Star /> <Star /> <Star />
         </div>
         <ResetBtn />
         <QuitBtn />
         <BackBtn />
-        <div>
+        <div className="c-modal__stars">
           <Star /> <Star /> <Star />
         </div>
       </div>

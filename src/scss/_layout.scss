@@ -1,19 +1,18 @@
-// todo: grid for IE
-// fixme: prefixes
-
 .l-grid {
+  display: -ms-grid;
   display: grid;
   /* Full-screen grid */
   width: 100%;
   height: 100%;
   text-align: center;
 
+  -ms-grid-columns: minmax(80px, 140px) minmax(80px, 140px) 1fr
+    minmax(80px, 140px) minmax(80px, 140px);
   grid-template-columns:
-    minmax(100px, 140px) minmax(100px, 140px) 1fr minmax(100px, 140px)
-    minmax(100px, 140px);
-  grid-template-rows:
-    auto auto minmax(auto, 1fr) minmax(auto, 1fr)
-    auto auto;
+    minmax(80px, 140px) minmax(80px, 140px) 1fr minmax(80px, 140px)
+    minmax(80px, 140px);
+  -ms-grid-rows: auto auto 1fr 1fr auto auto;
+  grid-template-rows: auto auto 1fr 1fr auto auto;
 
   grid-template-areas:
     'header header header header header'
@@ -25,51 +24,81 @@
 }
 
 .l-grid__item-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: header;
 }
 
 .l-grid__item-level {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: level;
 }
 
 .l-grid__item-book {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: book;
   align-self: center;
 }
 
 .l-grid__item-letters {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
   grid-area: letters;
   justify-self: center;
 }
 
 .l-grid__item-tankPL1 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-row-span: 2;
   grid-area: tankPL1;
 }
 
 .l-grid__item-headPL1 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
   grid-area: headPL1;
 }
 
 .l-grid__item-pointsPL1 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
   grid-area: pointsPL1;
 }
 
 .l-grid__item-pointsPL2 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 4;
   grid-area: pointsPL2;
 }
 
 .l-grid__item-headPL2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
   grid-area: headPL2;
 }
 
 .l-grid__item-tankPL2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+  -ms-grid-row-span: 2;
   grid-area: tankPL2;
 }
 
 .l-list {
+  display: block;
   list-style-type: none;
   padding-left: 0.2em;
   max-width: 23rem;
+  // Fallback for IE for justify-self: center
+  margin-left: auto;
+  margin-right: auto;
 
   &__item {
     display: inline-block;
