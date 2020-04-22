@@ -16,11 +16,7 @@ import PointsPL2 from './Components/PointsPL2';
 import GameOverModal from './Components/GameOverModal';
 import QuitGameModal from './Components/QuitGameModal';
 
-// fixme: https://eslint.org/docs/rules/arrow-parens
-
 // todo: head / PWA
-
-// todo: bem modifiers
 
 function App() {
   return (
