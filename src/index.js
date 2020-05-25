@@ -17,3 +17,5 @@ ReactDOM.render(
 
 // Registering the service worker
 serviceWorker.register();
+
+// TODO: comply with the Lighthouse audit PWA requirements
