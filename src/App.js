@@ -16,7 +16,7 @@ import PointsPL2 from './Components/PointsPL2';
 import GameOverModal from './Components/GameOverModal';
 import QuitGameModal from './Components/QuitGameModal';
 
-// todo: head / PWA
+// todo: head
 
 function App() {
   return (
