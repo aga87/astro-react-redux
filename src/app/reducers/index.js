@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-
 import game, * as fromGame from './game';
 import ui, * as fromUI from './ui';
 

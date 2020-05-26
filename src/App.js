@@ -1,5 +1,4 @@
 import React from 'react';
-
 import OptionsBtn from './Components/OptionsBtn';
 import OptionsModal from './Components/OptionsModal';
 import Level from './Components/Level';

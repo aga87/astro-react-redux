@@ -2,7 +2,7 @@ import { OPEN_OPTIONS, CLOSE_OPTIONS, RESET_GAME, QUIT_GAME } from '../actions';
 
 const initialState = {
   optionsModalIsOpen: false,
-  quitModalIsOpen: false
+  quitModalIsOpen: false,
 };
 
 const ui = (state = initialState, action) => {
@@ -10,17 +10,17 @@ const ui = (state = initialState, action) => {
     case OPEN_OPTIONS:
       return {
         ...state,
-        optionsModalIsOpen: true
+        optionsModalIsOpen: true,
       };
     case CLOSE_OPTIONS:
       return {
         ...state,
-        optionsModalIsOpen: false
+        optionsModalIsOpen: false,
       };
     case QUIT_GAME:
       return {
         optionsModalIsOpen: false,
-        quitModalIsOpen: true
+        quitModalIsOpen: true,
       };
     case RESET_GAME:
       return initialState;
@@ -31,5 +31,5 @@ const ui = (state = initialState, action) => {
 
 export default ui;
 
-export const optionsModalIsOpen = state => state.optionsModalIsOpen;
-export const quitModalIsOpen = state => state.quitModalIsOpen;
+export const optionsModalIsOpen = (state) => state.optionsModalIsOpen;
+export const quitModalIsOpen = (state) => state.quitModalIsOpen;
