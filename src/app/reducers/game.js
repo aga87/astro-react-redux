@@ -3,7 +3,7 @@ import { alphabet } from '../game-setup';
 
 const initialState = {
   bookKey: [],
-  roundProgress: ['MISSION: UNCOVER THE TITLES OF SCI-FI MASTERWORKS'],
+  roundProgress: ['MISSION: REVEAL THE TITLES OF SCI-FI MASTERWORKS'],
   uniqueLettersNo: 0,
   nextTurnIsPL1: true,
   passIsAllowed: false,
