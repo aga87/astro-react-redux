@@ -49,8 +49,8 @@ const game = (state = initialState, action) => {
         // Check if the guess is correct, i.e. if the book title contains the letter
         const guessIsCorrect = state.bookKey.some((letter) => letter === guess);
 
-        // Compare the guess against each letter in the book key
-        // and replace the respective underscores with the guess
+        // Compares the guess against each letter in the book key
+        // and replaces the respective underscores with the guess
         const updatedRoundProgress = state.bookKey.map((letter, index) => {
           if (letter === guess) return guess;
           return state.roundProgress[index];
@@ -71,7 +71,7 @@ const game = (state = initialState, action) => {
 
           // (if the guess is wrong)
           if (
-            // if one of the players has no chances left
+            // if one of the players has no chances left and it's their turn
             (state.nextTurnIsPL1 && state.chancesPL1 === 0) ||
             (!state.nextTurnIsPL1 && state.chancesPL2 === 0)
           ) {
@@ -129,6 +129,42 @@ const game = (state = initialState, action) => {
               level: state.level + 1,
             };
           }
+        }
+
+        // (if the guess is wrong)
+        if (
+          // if one of the players has no chances left and it's their turn
+          (state.nextTurnIsPL1 && state.chancesPL1 === 0) ||
+          (!state.nextTurnIsPL1 && state.chancesPL2 === 0)
+        ) {
+          return {
+            ...state,
+            gameOver: true,
+          };
+        }
+
+        if (state.nextTurnIsPL1) {
+          return {
+            ...state,
+            nextTurnIsPL1: !state.nextTurnIsPL1,
+            chancesPL1: state.chancesPL1 - 1,
+            passIsAllowed: false,
+            availLetters: state.availLetters.filter(
+              (letter) => letter !== guess
+            ),
+          };
+        }
+
+        if (!state.nextTurnIsPL1) {
+          return {
+            ...state,
+            nextTurnIsPL1: !state.nextTurnIsPL1,
+            chancesPL2: state.chancesPL2 - 1,
+            passIsAllowed: false,
+            availLetters: state.availLetters.filter(
+              (letter) => letter !== guess
+            ),
+          };
         }
       }
       break;
