@@ -9,19 +9,31 @@
   }
 
   &__content {
-    width: 25.629rem;
+    width: 90%;
     height: 25.629rem;
+    max-height: 90%;
     @include centerXY-absolute();
     // Center modal contents vertically
     @include flex-column();
     justify-content: space-between;
     align-items: center;
-    padding: ($b-l-h * 1rem) 0 ($b-l-h * 2rem) 0;
     background: $black-09;
     border: ($b-l-h * 0.25rem) solid $white;
   }
 
   &__stars {
     height: $b-l-h * 1rem;
+  }
+}
+
+@media only screen and (min-height: 30rem) {
+  .c-modal__content {
+    padding: ($b-l-h * 1rem) 0 ($b-l-h * 2rem) 0;
+  }
+}
+
+@media only screen and (min-width: 30rem) {
+  .c-modal__content {
+    width: 25.629rem;
   }
 }

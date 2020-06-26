@@ -4,7 +4,7 @@ html {
   background: url('../img/sunrise-from-space.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color: $blue-charcoal;
-  font-size: 100%;
+  font-size: 110%;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
   color: $heather;
 }
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 500px) {
   html {
     font-size: 120%;
   }
