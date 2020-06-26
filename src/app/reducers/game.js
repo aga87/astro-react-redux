@@ -41,94 +41,30 @@ const game = (state = initialState, action) => {
         availLetters: alphabet,
       };
     }
-    case MAKE_MOVE:
-      {
-        // Get the player's guess
-        const guess = action.payload.toUpperCase();
+    case MAKE_MOVE: {
+      // Get the player's guess
+      const guess = action.payload.toUpperCase();
+      // Check if the guess is correct, i.e. if the book title contains the letter
+      const guessIsCorrect = state.bookKey.some((letter) => letter === guess);
 
-        // Check if the guess is correct, i.e. if the book title contains the letter
-        const guessIsCorrect = state.bookKey.some((letter) => letter === guess);
+      // Compares the guess against each letter in the book key
+      // and replaces the respective underscores with the guess
+      const updatedRoundProgress = state.bookKey.map((letter, index) => {
+        if (letter === guess) return guess;
+        return state.roundProgress[index];
+      });
 
-        // Compares the guess against each letter in the book key
-        // and replaces the respective underscores with the guess
-        const updatedRoundProgress = state.bookKey.map((letter, index) => {
-          if (letter === guess) return guess;
-          return state.roundProgress[index];
-        });
-
-        while (state.uniqueLettersNo > 1) {
-          if (guessIsCorrect) {
-            return {
-              ...state,
-              roundProgress: updatedRoundProgress,
-              uniqueLettersNo: state.uniqueLettersNo - 1,
-              passIsAllowed: true,
-              availLetters: state.availLetters.filter(
-                (letter) => letter !== guess
-              ),
-            };
-          }
-
-          // (if the guess is wrong)
-          if (
-            // if one of the players has no chances left and it's their turn
-            (state.nextTurnIsPL1 && state.chancesPL1 === 0) ||
-            (!state.nextTurnIsPL1 && state.chancesPL2 === 0)
-          ) {
-            return {
-              ...state,
-              gameOver: true,
-            };
-          }
-
-          if (state.nextTurnIsPL1) {
-            return {
-              ...state,
-              nextTurnIsPL1: !state.nextTurnIsPL1,
-              chancesPL1: state.chancesPL1 - 1,
-              passIsAllowed: false,
-              availLetters: state.availLetters.filter(
-                (letter) => letter !== guess
-              ),
-            };
-          }
-
-          if (!state.nextTurnIsPL1) {
-            return {
-              ...state,
-              nextTurnIsPL1: !state.nextTurnIsPL1,
-              chancesPL2: state.chancesPL2 - 1,
-              passIsAllowed: false,
-              availLetters: state.availLetters.filter(
-                (letter) => letter !== guess
-              ),
-            };
-          }
-        }
-        // (if state.uniqueLettersNo === 1)
+      while (state.uniqueLettersNo > 1) {
         if (guessIsCorrect) {
-          if (state.nextTurnIsPL1) {
-            return {
-              ...state,
-              roundProgress: updatedRoundProgress,
-              pointsPL1: state.pointsPL1 + 1,
-              uniqueLettersNo: state.uniqueLettersNo - 1,
-              passIsAllowed: false,
-              availLetters: [],
-              level: state.level + 1,
-            };
-          }
-          if (!state.nextTurnIsPL1) {
-            return {
-              ...state,
-              roundProgress: updatedRoundProgress,
-              pointsPL2: state.pointsPL2 + 1,
-              uniqueLettersNo: state.uniqueLettersNo - 1,
-              passIsAllowed: false,
-              availLetters: [],
-              level: state.level + 1,
-            };
-          }
+          return {
+            ...state,
+            roundProgress: updatedRoundProgress,
+            uniqueLettersNo: state.uniqueLettersNo - 1,
+            passIsAllowed: true,
+            availLetters: state.availLetters.filter(
+              (letter) => letter !== guess
+            ),
+          };
         }
 
         // (if the guess is wrong)
@@ -167,14 +103,69 @@ const game = (state = initialState, action) => {
           };
         }
       }
-      break;
+      // (if state.uniqueLettersNo === 1)
+      if (guessIsCorrect) {
+        if (state.nextTurnIsPL1) {
+          return {
+            ...state,
+            roundProgress: updatedRoundProgress,
+            pointsPL1: state.pointsPL1 + 1,
+            uniqueLettersNo: state.uniqueLettersNo - 1,
+            passIsAllowed: false,
+            availLetters: [],
+            level: state.level + 1,
+          };
+        }
+        if (!state.nextTurnIsPL1) {
+          return {
+            ...state,
+            roundProgress: updatedRoundProgress,
+            pointsPL2: state.pointsPL2 + 1,
+            uniqueLettersNo: state.uniqueLettersNo - 1,
+            passIsAllowed: false,
+            availLetters: [],
+            level: state.level + 1,
+          };
+        }
+      }
+
+      // (if the guess is wrong)
+      if (
+        // if one of the players has no chances left and it's their turn
+        (state.nextTurnIsPL1 && state.chancesPL1 === 0) ||
+        (!state.nextTurnIsPL1 && state.chancesPL2 === 0)
+      ) {
+        return {
+          ...state,
+          gameOver: true,
+        };
+      }
+
+      if (state.nextTurnIsPL1) {
+        return {
+          ...state,
+          nextTurnIsPL1: !state.nextTurnIsPL1,
+          chancesPL1: state.chancesPL1 - 1,
+          passIsAllowed: false,
+          availLetters: state.availLetters.filter((letter) => letter !== guess),
+        };
+      }
+
+      // if (!state.nextTurnIsPL1)
+      return {
+        ...state,
+        nextTurnIsPL1: !state.nextTurnIsPL1,
+        chancesPL2: state.chancesPL2 - 1,
+        passIsAllowed: false,
+        availLetters: state.availLetters.filter((letter) => letter !== guess),
+      };
+    }
     case PASS_TURN:
       return {
         ...state,
         nextTurnIsPL1: !state.nextTurnIsPL1,
         passIsAllowed: false,
       };
-
     case RESET_GAME:
       return initialState;
 
