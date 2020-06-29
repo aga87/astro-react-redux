@@ -7,8 +7,6 @@ function Star() {
       viewBox="0 0 80 80"
       preserveAspectRatio="xMidYMid meet"
       className="o-star"
-      height="100%"
-      width="auto"
     >
       <polygon
         points="0,30 30,28 40,0 50,28 80,30 56,47 64,77 40,60 14,77 22,47 0,30"

@@ -3,3 +3,11 @@
   width: auto;
   background: green;
 }
+
+@supports (display: -ms-grid) {
+  .o-star {
+    height: 3em;
+    width: 3em;
+    background: green;
+  }
+}
