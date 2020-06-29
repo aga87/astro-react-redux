@@ -1,13 +1,11 @@
 .o-star {
-  height: 1em;
-  width: 1em;
-  background: green;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 @supports (display: grid) {
   .o-star {
     height: 100%;
     width: auto;
-    background: blue;
   }
 }
