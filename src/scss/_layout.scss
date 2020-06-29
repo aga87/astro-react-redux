@@ -6,8 +6,9 @@
   height: 100%;
   text-align: center;
 
-  -ms-grid-columns: minmax(80px, 140px) minmax(80px, 140px) 1fr
-    minmax(80px, 140px) minmax(80px, 140px);
+  // -ms-grid-columns: minmax(80px, 140px) minmax(80px, 140px) 1fr
+  //   minmax(80px, 140px) minmax(80px, 140px);
+  -ms-grid-columns: 80px 80px 1fr 80px 80px;
   grid-template-columns:
     minmax(80px, 140px) minmax(80px, 140px) 1fr minmax(80px, 140px)
     minmax(80px, 140px);
