@@ -9,7 +9,8 @@
   // -ms-grid-columns: minmax(80px, 140px) minmax(80px, 140px) 1fr
   //   minmax(80px, 140px) minmax(80px, 140px);
   // todo: testtt
-  -ms-grid-columns: 80px 80px 1fr 80px 80px;
+  // -ms-grid-columns: 80px 80px 1fr 80px 80px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns:
     minmax(80px, 140px) minmax(80px, 140px) 1fr minmax(80px, 140px)
     minmax(80px, 140px);
