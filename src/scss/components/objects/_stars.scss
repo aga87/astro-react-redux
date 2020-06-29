@@ -1,8 +1,10 @@
+//IE11
 .o-star {
-  height: 1.5em;
-  width: 1.5em;
+  height: 1.2em;
+  width: 1.2em;
 }
 
+// Browsers excluding =< IE11
 @supports (display: grid) {
   .o-star {
     height: 100%;

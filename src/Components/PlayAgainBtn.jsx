@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { resetGame } from '../app/actions';
-import menuSound from '../audio/menu.wav';
+import menuSound from '../audio/menu.mp3';
 
 function PlayAgainBtn() {
   const dispatch = useDispatch();
