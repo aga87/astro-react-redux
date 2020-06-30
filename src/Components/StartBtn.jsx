@@ -19,7 +19,7 @@ function StartBtn() {
     <div>
       <button
         type="button"
-        className="o-btn"
+        className="o-btn o-btn--start"
         onClick={handleClick}
         disabled={isDisabled}
       >

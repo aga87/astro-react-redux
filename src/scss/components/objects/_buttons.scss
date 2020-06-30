@@ -1,3 +1,12 @@
+@keyframes lightUp {
+  from {
+    border-color: $burnt-orange;
+  }
+  to {
+    border-color: $yellow;
+  }
+}
+
 .o-btn {
   display: inline-block;
   height: 2.25rem;
@@ -14,6 +23,10 @@
     background: transparent;
     border: none;
     color: transparent;
+  }
+
+  &--start {
+    animation: lightUp 2s ease-in-out infinite alternate;
   }
 
   &--letter {
