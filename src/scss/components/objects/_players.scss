@@ -1,0 +1,15 @@
+.o-player {
+  color: grey;
+  -moz-transition: color 0s ease 500ms;
+  -webkit-transition: color 0s ease 500ms;
+  -o-transition: color 0s ease 500ms;
+  transition: color 0s ease 500ms;
+
+  &--active {
+    color: $burnt-orange;
+    -moz-transition: color 0s ease 500ms;
+    -webkit-transition: color 0s ease 500ms;
+    -o-transition: color 0s ease 500ms;
+    transition: color 0s ease 500ms;
+  }
+}

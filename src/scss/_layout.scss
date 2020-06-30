@@ -6,22 +6,19 @@
   height: 100%;
   text-align: center;
 
-  // -ms-grid-columns: minmax(80px, 140px) minmax(80px, 140px) 1fr
-  //   minmax(80px, 140px) minmax(80px, 140px);
-  // todo: testtt
   -ms-grid-columns: 80px 80px 1fr 80px 80px;
-  // -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns:
     minmax(80px, 140px) minmax(80px, 140px) 1fr minmax(80px, 140px)
     minmax(80px, 140px);
-  -ms-grid-rows: auto auto 1fr 1fr auto auto;
-  grid-template-rows: auto auto 1fr 1fr auto auto;
+  -ms-grid-rows: auto auto 1fr 1fr auto auto auto;
+  grid-template-rows: auto auto 1fr 1fr auto auto auto;
 
   grid-template-areas:
     'header header header header header'
     'level level level level level'
     'book book book book book'
     'letters letters letters letters letters'
+    'player1 player1 . player2 player2'
     'tankPL1 headPL1 . headPL2 tankPL2'
     'tankPL1 pointsPL1 . pointsPL2 tankPL2';
 
@@ -51,34 +48,49 @@
     grid-area: letters;
     justify-self: center;
   }
-  &__item-tankPL1 {
+
+  &__item-player1 {
     -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: player1;
+  }
+
+  &__item-player2 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+    grid-area: player2;
+  }
+
+  &__item-tankPL1 {
+    -ms-grid-row: 6;
     -ms-grid-column: 1;
     -ms-grid-row-span: 2;
     grid-area: tankPL1;
   }
   &__item-headPL1 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 6;
     -ms-grid-column: 2;
     grid-area: headPL1;
   }
   &__item-pointsPL1 {
-    -ms-grid-row: 6;
+    -ms-grid-row: 7;
     -ms-grid-column: 2;
     grid-area: pointsPL1;
   }
   &__item-pointsPL2 {
-    -ms-grid-row: 6;
+    -ms-grid-row: 7;
     -ms-grid-column: 4;
     grid-area: pointsPL2;
   }
   &__item-headPL2 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 6;
     -ms-grid-column: 4;
     grid-area: headPL2;
   }
   &__item-tankPL2 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 6;
     -ms-grid-column: 5;
     -ms-grid-row-span: 2;
     grid-area: tankPL2;

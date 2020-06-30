@@ -6,6 +6,8 @@ import RoundProgress from './Components/RoundProgress';
 import LetterBtns from './Components/LetterBtns';
 import PassBtn from './Components/PassBtn';
 import StartBtn from './Components/StartBtn';
+import Player1 from './Components/Player1';
+import Player2 from './Components/Player2';
 import CanvasTankPL1 from './Components/CanvasTankPL1';
 import CanvasTankPL2 from './Components/CanvasTankPL2';
 import CanvasHeadPL1 from './Components/CanvasHeadPL1';
@@ -42,7 +44,12 @@ function App() {
           <LetterBtns />
           <PassBtn />
         </div>
-
+        <div className="l-grid__item-player1">
+          <Player1 />
+        </div>
+        <div className="l-grid__item-player2">
+          <Player2 />
+        </div>
         <div className="l-grid__item-tankPL1">
           <CanvasTankPL1 />
         </div>

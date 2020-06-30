@@ -19,6 +19,10 @@
   line-height: inherit;
   color: $white;
 
+  &:focus {
+    outline: none;
+  }
+
   &:disabled {
     background: transparent;
     border: none;
@@ -26,6 +30,8 @@
   }
 
   &--start {
+    -webkit-animation: lightUp 2s ease-in-out infinite alternate;
+    -moz-animation: lightUp 2s ease-in-out infinite alternate;
     animation: lightUp 2s ease-in-out infinite alternate;
   }
 
@@ -36,12 +42,13 @@
 
     &:disabled {
       -webkit-transition: all 1s ease-in;
+      -o-transition: all 1s ease-in;
+      -moz-transition: all 1s ease-in;
       transition: all 0.5s ease-in;
     }
   }
 
   &--modal {
-    // width: 7.594rem;
     width: 7.9rem;
     background: transparent;
   }
