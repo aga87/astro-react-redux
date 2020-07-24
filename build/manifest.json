@@ -1,0 +1,15 @@
+{
+  "short_name": "Astroman",
+  "name": "Astroman - Game for 2 Players",
+  "icons": [
+    {
+      "src": "./logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme-color": "#021024",
+  "background_color": "#021024"
+}

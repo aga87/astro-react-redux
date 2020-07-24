@@ -7,9 +7,11 @@
     <meta name="theme-color" content="#021024" />
     <meta
       name="description"
-      content="Astroman - a hangman-inspired game for two players, built using JavaScript (React + Redux)"
+      content="Astroman - a hangman-inspired game for two players, a modern PWA built with JavaScript (React + Redux)"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+    <link rel="apple-touch-icon" href="./logo192.png" />
+    <link rel="manifest" href="./manifest.json" />
 
     <!-- Google Fonts -->
     <link
@@ -21,5 +23,17 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      // Check if service worker is supported
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          // reg.scope - URL on which the service worker was installed
+          navigator.serviceWorker
+            .register('./serviceworker.js')
+            .then((reg) => console.log('Success', reg.scope))
+            .catch((err) => console.log('Failure'));
+        });
+      }
+    </script>
   </body>
 </html>
