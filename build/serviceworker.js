@@ -1,6 +1,10 @@
 const CACHE_NAME = 'version-1';
 const urlsToCache = ['index.html', 'offline.html'];
 
+// const urlsToCache = ['index.html', './static/css/main.3829688e.chunk.js', "./static/js/2.b869a28e.chunk.js", "static/js/" ];
+
+// const urlsToCache = ['index.html'];
+
 const self = this;
 
 // Install service worker
@@ -15,12 +19,15 @@ self.addEventListener('install', (e) => {
   );
 });
 
+// fixme:  https://blog.bitsrc.io/understanding-service-workers-and-caching-strategies-a6c1e1cbde03
+
 // Listen for requests
 
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request).then(() => {
       return fetch(e.request).catch(() => caches.match('offline.html'));
+      // return fetch(e.request).catch(() => caches.match(e.request));
     })
   );
 });
