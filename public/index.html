@@ -9,9 +9,8 @@
       name="description"
       content="Astroman - a hangman-inspired game for two players, a modern PWA built with JavaScript (React + Redux)"
     />
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
-    <link rel="apple-touch-icon" href="./logo192.png" />
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <!-- Google Fonts -->
     <link
@@ -30,8 +29,8 @@
           // reg.scope - URL on which the service worker was installed
           navigator.serviceWorker
             .register('./serviceworker.js')
-            .then((reg) => console.log('Success', reg.scope))
-            .catch((err) => console.log('Failure'));
+            .then((reg) => console.log('Service Worker registered', reg.scope))
+            .catch((err) => console.log(`Service Worker: Error: ${err}`));
         });
       }
     </script>
