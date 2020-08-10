@@ -27,22 +27,6 @@ self.addEventListener('fetch', (e) => {
 
 // Activate the service worker
 
-// self.addEventListener('activate', (e) => {
-//   const cacheWhitelist = [];
-//   cacheWhitelist.push(CACHE_NAME);
-//   e.waitUntil(
-//     caches.keys().then((cacheNames) =>
-//       Promise.all(
-//         cacheNames.map((cacheName) => {
-//           if (!cacheWhitelist.includes(cacheName)) {
-//             return caches.delete(cacheName);
-//           }
-//         })
-//       )
-//     )
-//   );
-// });
-
 self.addEventListener('activate', (e) => {
   console.log('Service Worker: Activated');
   // Remove unwanted caches
