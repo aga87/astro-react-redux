@@ -4,21 +4,122 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#021024" />
-    <meta
-      name="description"
-      content="Astroman - a hangman-inspired game for two players, built using JavaScript (React + Redux)"
-    />
 
-    <!-- Google Fonts -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css?family=Righteous&display=swap"
-      rel="stylesheet"
-    /> -->
     <title>Astroman</title>
+    <style type="text/css">
+      html {
+        font-size: 120%;
+        background: #021024;
+        background: #000;
+        color: #fff;
+      }
 
-    <style type"text/css"> </style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      .l-wrapper {
+        width: 80%;
+        margin: auto;
+        padding-top: 3rem;
+      }
+
+      .o-star {
+        height: 1rem;
+        width: auto;
+      }
+
+      .c-info-panel {
+        text-align: center;
+        border: 2px solid #d15000;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 2rem;
+      }
+
+      .c-info-panel__txt {
+        padding: 1rem;
+      }
+    </style>
   </head>
   <body>
-  <div>Please go online to play</div>
+    <div className="l-wrapper">
+      <div className="c-info-panel">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 80 80"
+            preserveAspectRatio="xMidYMid meet"
+            className="o-star"
+          >
+            <polygon
+              points="0,30 30,28 40,0 50,28 80,30 56,47 64,77 40,60 14,77 22,47 0,30"
+              fill="yellow"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 80 80"
+            preserveAspectRatio="xMidYMid meet"
+            className="o-star"
+          >
+            <polygon
+              points="0,30 30,28 40,0 50,28 80,30 56,47 64,77 40,60 14,77 22,47 0,30"
+              fill="yellow"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 80 80"
+            preserveAspectRatio="xMidYMid meet"
+            className="o-star"
+          >
+            <polygon
+              points="0,30 30,28 40,0 50,28 80,30 56,47 64,77 40,60 14,77 22,47 0,30"
+              fill="yellow"
+            />
+          </svg>
+        </div>
+
+        <p className="c-info-panel__txt">Please go online to play Astroman.</p>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 80 80"
+            preserveAspectRatio="xMidYMid meet"
+            className="o-star"
+          >
+            <polygon
+              points="0,30 30,28 40,0 50,28 80,30 56,47 64,77 40,60 14,77 22,47 0,30"
+              fill="yellow"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 80 80"
+            preserveAspectRatio="xMidYMid meet"
+            className="o-star"
+          >
+            <polygon
+              points="0,30 30,28 40,0 50,28 80,30 56,47 64,77 40,60 14,77 22,47 0,30"
+              fill="yellow"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 80 80"
+            preserveAspectRatio="xMidYMid meet"
+            className="o-star"
+          >
+            <polygon
+              points="0,30 30,28 40,0 50,28 80,30 56,47 64,77 40,60 14,77 22,47 0,30"
+              fill="yellow"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
