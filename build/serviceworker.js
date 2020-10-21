@@ -1,51 +1,3 @@
-// const CACHE_NAME = 'version-2';
-// const urlsToCache = ['index.html', 'offline.html'];
-
-// const self = this;
-
-// // Install SW
-
-// self.addEventListener('install', (e) => {
-//   e.waitUntil(
-//     caches.open(CACHE_NAME).then((cache) => {
-//       console.log('Opened cache');
-//       return cache.addAll(urlsToCache);
-//     })
-//   );
-// });
-
-// // Listen for requests
-
-// self.addEventListener('fetch', (e) => {
-//   e.respondWith(
-//     // Look for the match in the cache
-//     caches.match(e.request).then(() => {
-//       return fetch(e.request).catch(() => caches.match('offline.html'));
-//     })
-//   );
-// });
-
-// // Activate the service worker
-
-// self.addEventListener('activate', (e) => {
-//   console.log('Service Worker: Activated');
-//   // Remove unwanted caches
-//   e.waitUntil(
-//     caches.keys().then((cacheNames) => {
-//       return Promise.all(
-//         cacheNames.map((cache) => {
-//           if (cache !== CACHE_NAME) {
-//             console.log('Service Worker: Clearing Old Cache');
-//             return caches.delete(cache);
-//           }
-//         })
-//       );
-//     })
-//   );
-// });
-
-// testing
-
 const CACHE_NAME = 'v1';
 const urlsToCache = ['offline.html'];
 const self = this;
@@ -53,8 +5,6 @@ const self = this;
 // Install SW
 
 self.addEventListener('install', (e) => {
-  console.log('SW installed');
-
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(urlsToCache);
@@ -65,7 +15,6 @@ self.addEventListener('install', (e) => {
 // Activate and remove old caches
 
 self.addEventListener('activate', (e) => {
-  console.log('Service Worker: Activated');
   e.waitUntil(
     caches.keys().then((cacheKeys) => {
       return Promise.all(
@@ -90,7 +39,6 @@ self.addEventListener('fetch', (e) => {
           fetch(e.request)
             .then((res) => {
               cache.put(e.request, res.clone());
-              console.log('caching');
               return res;
             })
             .catch(() => caches.match('/offline.html'))
