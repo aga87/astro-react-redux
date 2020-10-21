@@ -44,6 +44,8 @@
 //   );
 // });
 
+// testing
+
 const CACHE_NAME = 'v1';
 const urlsToCache = ['offline.html'];
 const self = this;
